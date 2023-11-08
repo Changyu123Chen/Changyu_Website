@@ -56,9 +56,10 @@ const colors = ['#AAC9CE', '#9D94BA', '#D1725D', '#B6B4C2', '#BEC4E1',
 				'#CC6666', '#C9BBC8', '#99ABB9', '#DAB4A7', '#586F77', 
 				'#FEC397', '#E5C1CD', '#F3DBCF', '#D28A7C', '#8E8E8E'];
 
-function random_num(num){
-	return Math.floor(Math.random() * num-1);
+function random_num(num) {
+  return Math.floor(Math.random() * num);
 }
+
 //create and store balls in an array
 const balls = [];
 
