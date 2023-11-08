@@ -62,41 +62,36 @@ function random_num(num) {
 
 //create and store balls in an array
 const balls = [];
-
-while(balls.length < 75){
-	add = 0;
-	const ball = new Ball(random_num(width), random_num(height), random_num(5), random_num(10), random_num(45), colors[random_num(15)]);
-	balls.push(ball);
-	// const ball_1 = new Ball(width, random_num(height), 8, random_num(10), random_num(45), colors[random_num(15)]);
-	// balls.push(ball_1);
-	// const ball_2 = new Ball(0, random_num(height), 8, random_num(10), random_num(45), colors[random_num(15)]);
-	// balls.push(ball_2);
-
-
+const number_balls = 65;
+for (let i = 0; i < number_balls; i++) {
+  const ball = new Ball(
+    random_num(width),
+    random_num(height),
+    random_num(5),
+    random_num(10),
+    random_num(45),
+    colors[random_num(15)]
+  );
+  balls.push(ball);
 }
-
 // const ball_1 = new Ball(random_num(width), random_num(height), 10, 8, 20, colors[random_num(15)]);
 // balls.push(ball_1);
 // const ball_2 = new Ball(random_num(width), random_num(height), 8, 8, 20, colors[random_num(15)]);
 // balls.push(ball_2);
 
 //create loop function
-function loop(){
-	//cover the previous frame's drawing before the next one is drawn
-	ctx.fillStyle = 'rgba(0,0,0,0.5)'
-	ctx.fillRect(0,0, window.innerWidth, window.innerHeight);
-	//run necessary func
-	for(let i = 0; i < balls.length; i++){
-		balls[i].createBall();
-		balls[i].changeBall();
-		
-
-	}
-	requestAnimationFrame(loop);
-	
-
-	
+function loop() {
+  ctx.fillStyle = 'rgba(0,0,0,0.5)';
+  ctx.fillRect(0, 0, width, height);
+  
+  for (let i = 0; i < balls.length; i++) {
+    balls[i].createBall();
+    balls[i].changeBall();
+  }
+  
+  requestAnimationFrame(loop);
 }
+
 loop();
 
 
