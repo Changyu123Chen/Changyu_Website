@@ -7,21 +7,30 @@
     <link rel="stylesheet" type="text/css" href="self-web-style.css">
 </head>
 <body>
-    <canvas></canvas>
-    <script type="text/javascript" src="self-web.js"></script>
-
-    <div class="center">
-        <h1>CHANGYU CHEN</h1>
-        <h2>Computer Engineering (3B)</h2>
-        <h2>University of Waterloo</h2>
-    </div>
-
-    <div class="nav_bar">
-        <ul>
-            <li><a href="https://github.com/Changyu123Chen" target="_blank">GitHub</a></li>
-            <li>Phone: 226-201-2618</li>
-            <li>Email: <a href="mailto:c536chen@uwaterloo.ca">c536chen@uwaterloo.ca</a></li>
-        </ul>
-    </div>
+    <div id="app"></div>
+    <div id="particles-js"></div>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+      particlesJS('particles-js', {
+        particles: {
+          number: { value: 120, density: { enable: true, value_area: 800 } },
+          color: { value: ['#fffbe6', '#FFFACD', '#FFFFF0'] },
+          shape: { type: 'star' },
+          opacity: { value: 0.5, random: true },
+          size: { value: 4, random: true },
+          move: { enable: true, speed: 3, out_mode:'bounce' }
+        },
+        interactivity: {
+          detect_on: 'canvas',
+          events: {
+            onhover: { enable: true, mode:'push' },
+            onclick: { enable: true, mode: 'push' },
+            resize: true
+          }
+        },
+        retina_detect: true
+      });
+    </script>
+    <script type="text/javascript" src="self-web_v2.js"></script>
 </body>
 </html>
