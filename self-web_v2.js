@@ -19,6 +19,7 @@ navBar.innerHTML = `
             <div class="dropdown-content">
                 <a href="#" onclick="alert('MirrorSelf page will update later')">MirrorSelf</a>
                 <a href="#" onclick="alert('Crowdfunding page will update later')">Crowdfunding</a>
+                <a href="https://transform-video-audio-to-transcript.vercel.app" target="_blank">TransformVideotoTranscript</a>
             </div>
         </li>
     </ul>
